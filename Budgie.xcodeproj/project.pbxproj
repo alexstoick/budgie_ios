@@ -22,6 +22,8 @@
 		7D4DBC7B18B901720026CABB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D4DBC7918B901720026CABB /* InfoPlist.strings */; };
 		7D4DBC7D18B901720026CABB /* BudgieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC7C18B901720026CABB /* BudgieTests.m */; };
 		7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8718B905D80026CABB /* ItemTableViewController.m */; };
+		7D4DBC8B18B910E90026CABB /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8A18B910E90026CABB /* Item.m */; };
+		7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		7D4DBC7C18B901720026CABB /* BudgieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudgieTests.m; sourceTree = "<group>"; };
 		7D4DBC8618B905D80026CABB /* ItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewController.h; sourceTree = "<group>"; };
 		7D4DBC8718B905D80026CABB /* ItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewController.m; sourceTree = "<group>"; };
+		7D4DBC8918B910E90026CABB /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Models/Item.h; sourceTree = "<group>"; };
+		7D4DBC8A18B910E90026CABB /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Models/Item.m; sourceTree = "<group>"; };
+		7D4DBC8D18B9112D0026CABB /* ReceiptItemsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceiptItemsDataSource.h; path = "Data Sources/ReceiptItemsDataSource.h"; sourceTree = "<group>"; };
+		7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptItemsDataSource.m; path = "Data Sources/ReceiptItemsDataSource.m"; sourceTree = "<group>"; };
 		A1B6673CBA65428FA99D6FD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,7 @@
 		7D4DBC5718B901720026CABB /* Budgie */ = {
 			isa = PBXGroup;
 			children = (
+				7D4DBC9018B911310026CABB /* Data Sources */,
 				7D4DBC8618B905D80026CABB /* ItemTableViewController.h */,
 				7D4DBC8718B905D80026CABB /* ItemTableViewController.m */,
 				7D4DBC6018B901720026CABB /* AppDelegate.h */,
@@ -125,6 +132,7 @@
 				7D4DBC6318B901720026CABB /* Main.storyboard */,
 				7D4DBC6918B901720026CABB /* Images.xcassets */,
 				7D4DBC5818B901720026CABB /* Supporting Files */,
+				7D4DBC8C18B910ED0026CABB /* Models */,
 			);
 			path = Budgie;
 			sourceTree = "<group>";
@@ -156,6 +164,24 @@
 				7D4DBC7918B901720026CABB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D4DBC8C18B910ED0026CABB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D4DBC8918B910E90026CABB /* Item.h */,
+				7D4DBC8A18B910E90026CABB /* Item.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7D4DBC9018B911310026CABB /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7D4DBC8D18B9112D0026CABB /* ReceiptItemsDataSource.h */,
+				7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */,
+			);
+			name = "Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */,
+				7D4DBC8B18B910E90026CABB /* Item.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
 				7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */,
 				7D4DBC5E18B901720026CABB /* main.m in Sources */,

@@ -14,13 +14,26 @@
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"];
 
-    if ( indexPath.row % 2 == 0)
-        [cell setAccessoryType: UITableViewCellAccessoryCheckmark] ;
-    else
-        [cell setAccessoryType:UITableViewCellAccessoryNone ] ;
+    [cell setAccessoryType:UITableViewCellAccessoryNone ] ;
     
     return cell ;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath] ;
+    UITableViewCellAccessoryType type = cell.accessoryType ;
+    if ( type == UITableViewCellAccessoryCheckmark )
+    {
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else
+    {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark ];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
