@@ -8,13 +8,12 @@
 
 #import "TotalViewController.h"
 #import "Item.h"
+#import "ItemTableViewController.h"
 
 @implementation TotalViewController
 
 - (void)viewDidLoad {
-
     [self computeTotalForItems];
-
 }
 
 -(void) computeTotalForItems{
@@ -28,5 +27,17 @@
     self.totalSelectedLabel.text = [NSString stringWithFormat:@"%.2f" , total ] ;
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+
+    ItemTableViewController * itemTable = viewController ;
+    NSLog(@"321") ;
+    itemTable.selectedRows = self.selectedItems ;
+}
+
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+
+    NSLog(@"dsa") ;
+
+}
 
 @end

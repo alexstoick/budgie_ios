@@ -13,8 +13,6 @@
 
 @interface ItemTableViewController()
 
-@property (assign, nonatomic) NSArray * selectedRows ;
-
 @end
 
 @implementation ItemTableViewController
@@ -22,10 +20,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [self getReceiptData];
-    self.selectedRows = [[NSArray alloc] init];
 }
-
-
 
 - (void)viewDidLoad {
 
@@ -55,10 +50,12 @@
 
     Item * currentItem = [[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:indexPath.row] ;
 
+    //NSLog ( @"%@" , [self.selectedRows indexOfObject: currentItem] ) ;
+
     cell.textLabel.text = currentItem.name ;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f" , currentItem.price] ;
 
-    [cell setAccessoryType:UITableViewCellAccessoryNone ] ;
+//    [cell setAccessoryType:UITableViewCellAccessoryNone ] ;
     
     return cell ;
 }
@@ -71,31 +68,12 @@
     if ( type == UITableViewCellAccessoryCheckmark )
     {
         [cell setAccessoryType:UITableViewCellAccessoryNone];
-        Item * currentItem =[[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:indexPath.row] ;
-        NSLog(@"%@" , currentItem ) ;
-        NSMutableArray * newArray = [NSMutableArray arrayWithArray:self.selectedRows] ;
-        [newArray removeObject: currentItem ] ;
-        self.selectedRows = newArray ;
-        //[self.selectedRows removeObject:[[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:indexPath.row]];
     }
     else
     {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark ];
-        Item * currentItem =[[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:indexPath.row] ;
-        NSLog(@"%@" , currentItem ) ;
-
-        NSMutableArray * newArray = [NSMutableArray arrayWithArray:self.selectedRows] ;
-        [newArray addObject: currentItem ] ;
-        self.selectedRows = newArray ;
-
-//        [self.selectedRows addObject: currentItem ] ;
-//        NSMutableArray * newArray = [NSMutableArray arrayWithArray:self.selectedRows];
-//        [newArray addObject:[NSNumber numberWithInteger:indexPath.row]];
-//        self.selectedRows = newArray ;
-        //NSLog(@"%@" , self.selectedRows ) ;
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //sNSLog(@"%@" , self.selectedRows ) ;
 }
 
 
@@ -112,7 +90,23 @@
     if ([[segue identifier] isEqualToString:@"itemListToTotalView"] )
     {
         TotalViewController * totalViewController = [segue destinationViewController] ;
-        totalViewController.selectedItems = self.selectedRows ;
+        NSMutableArray * selectedRows = [[NSMutableArray  alloc] init];
+
+        int count = [[ReceiptItemsDataSource getInstance].receiptItems count];
+
+        for ( int i = 0 ; i < count ; ++ i )
+        {
+            UITableViewCell * cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]] ;
+            if ( cell.accessoryType == UITableViewCellAccessoryCheckmark )
+            {
+                Item * item = [[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:i] ;
+                [selectedRows addObject:item];
+            }
+        }
+        Item * x = [selectedRows objectAtIndex:0] ;
+        NSLog(@"%.2f", x.price ) ;
+        totalViewController.selectedItems = selectedRows;
+        self.selectedRows = selectedRows ;
     }
 
 }

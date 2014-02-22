@@ -10,4 +10,6 @@
 
 @interface ItemTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray * selectedRows ;
+
 @end

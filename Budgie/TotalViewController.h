@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TotalViewController : UIViewController
+@interface TotalViewController : UIViewController <UINavigationControllerDelegate>
 
-@property (assign, nonatomic) NSArray * selectedItems ;
+@property (strong, nonatomic) NSArray * selectedItems ;
 @property (weak, nonatomic) IBOutlet UILabel *totalSelectedLabel;
 
 @end
