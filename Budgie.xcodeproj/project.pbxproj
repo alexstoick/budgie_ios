@@ -24,6 +24,7 @@
 		7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8718B905D80026CABB /* ItemTableViewController.m */; };
 		7D4DBC8B18B910E90026CABB /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8A18B910E90026CABB /* Item.m */; };
 		7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */; };
+		7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9218B93F920026CABB /* TotalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		7D4DBC8A18B910E90026CABB /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Models/Item.m; sourceTree = "<group>"; };
 		7D4DBC8D18B9112D0026CABB /* ReceiptItemsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceiptItemsDataSource.h; path = "Data Sources/ReceiptItemsDataSource.h"; sourceTree = "<group>"; };
 		7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptItemsDataSource.m; path = "Data Sources/ReceiptItemsDataSource.m"; sourceTree = "<group>"; };
+		7D4DBC9118B93F920026CABB /* TotalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalViewController.h; sourceTree = "<group>"; };
+		7D4DBC9218B93F920026CABB /* TotalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalViewController.m; sourceTree = "<group>"; };
 		A1B6673CBA65428FA99D6FD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,8 @@
 				7D4DBC6018B901720026CABB /* AppDelegate.h */,
 				7D4DBC6118B901720026CABB /* AppDelegate.m */,
 				7D4DBC6318B901720026CABB /* Main.storyboard */,
+				7D4DBC9118B93F920026CABB /* TotalViewController.h */,
+				7D4DBC9218B93F920026CABB /* TotalViewController.m */,
 				7D4DBC6918B901720026CABB /* Images.xcassets */,
 				7D4DBC5818B901720026CABB /* Supporting Files */,
 				7D4DBC8C18B910ED0026CABB /* Models */,
@@ -319,6 +324,7 @@
 				7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */,
 				7D4DBC8B18B910E90026CABB /* Item.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
+				7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */,
 				7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */,
 				7D4DBC5E18B901720026CABB /* main.m in Sources */,
 			);

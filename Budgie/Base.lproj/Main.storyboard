@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="normalCell" textLabel="KTQ-OH-PlU" style="IBUITableViewCellStyleDefault" id="rFz-yK-Erq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="normalCell" textLabel="KTQ-OH-PlU" detailTextLabel="ERB-wA-yFu" style="IBUITableViewCellStyleSubtitle" id="rFz-yK-Erq">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFz-yK-Erq" id="Wt6-Vk-GHq">
@@ -21,9 +21,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KTQ-OH-PlU">
-                                            <rect key="frame" x="15" y="0.0" width="266" height="43"/>
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERB-wA-yFu">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -39,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Item List" id="Ghi-Qc-rTe">
                         <barButtonItem key="rightBarButtonItem" title="Total" id="SC4-AE-D6l">
                             <connections>
-                                <segue destination="h1n-nE-Stc" kind="push" id="gvl-Pb-y2q"/>
+                                <segue destination="h1n-nE-Stc" kind="push" identifier="itemListToTotalView" id="gvl-Pb-y2q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="617" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Total View Controller - Total-->
         <scene sceneID="aEh-WO-MZB">
             <objects>
-                <viewController id="h1n-nE-Stc" sceneMemberID="viewController">
+                <viewController id="h1n-nE-Stc" customClass="TotalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HLf-pk-FM4"/>
                         <viewControllerLayoutGuide type="bottom" id="j9I-JL-ycs"/>
@@ -64,9 +71,21 @@
                     <view key="view" contentMode="scaleToFill" id="cVh-MK-Krt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1R-IM-Y42">
+                                <rect key="frame" x="44" y="113" width="232" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jwo-GB-FSW"/>
+                    <navigationItem key="navigationItem" title="Total" id="jwo-GB-FSW"/>
+                    <connections>
+                        <outlet property="totalSelectedLabel" destination="Q1R-IM-Y42" id="Tvd-eN-VLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XQ-YS-Tft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
