@@ -10,4 +10,11 @@
 
 @interface ReceiptItemsDataSource : NSObject
 
++(ReceiptItemsDataSource*)getInstance;
+
+@property(strong,nonatomic) NSArray * receiptItems ;
+
+-parseReceiptItemListForReceiptWithId: (int) receipt_id
+                       WithCompletion:(void (^)(BOOL))completionBlock;
+
 @end
