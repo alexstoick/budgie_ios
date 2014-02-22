@@ -7,12 +7,29 @@
 //
 
 #import "ItemTableViewController.h"
+#import "ReceiptItemsDataSource.h"
+#import "Item.h"
 
 @implementation ItemTableViewController
+
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [[ReceiptItemsDataSource getInstance] parseReceiptItemListForReceiptWithId:(int)@1 WithCompletion:^(BOOL b) {
+        [self.tableView reloadData];
+        NSLog(@"table data has loaded");
+    }] ;
+}
+
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"];
+
+    Item * currentItem = [[ReceiptItemsDataSource getInstance].receiptItems objectAtIndex:indexPath.row] ;
+
+    cell.textLabel.text = currentItem.name ;
 
     [cell setAccessoryType:UITableViewCellAccessoryNone ] ;
     
@@ -40,7 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5 ;
+    return [[ReceiptItemsDataSource getInstance].receiptItems count] ;
 }
 
 @end

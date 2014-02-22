@@ -43,9 +43,9 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
     return _manager ;
 }
 
-- (id)parseReceiptItemListForReceiptWithId:(int)receipt_id WithCompletion:(void (^)(BOOL))completionBlock {
+- (void)parseReceiptItemListForReceiptWithId:(int)receipt_id WithCompletion:(void (^)(BOOL))completionBlock {
 
-    NSString * url = [NSString stringWithFormat:@"%@/receipts/%d",
+    NSString * url = [NSString stringWithFormat:@"%@/receipts/%@.json",
                                                 RailsBaseUrl , receipt_id ];
 
     [self.manager GET:url
@@ -64,11 +64,11 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
                       currentItem.category = [[item valueForKey:@"category"] integerValue];
                       [itemsArray addObject:currentItem];
                   }
-
                   self.receiptItems = itemsArray ;
                   completionBlock(YES);
               }
               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                  NSLog(@"%@" , error ) ;
                   completionBlock(NO);
               }
     ];
