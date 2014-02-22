@@ -19,12 +19,13 @@
 -(void) computeTotalForItems{
 
     float total = 0 ;
+
     for ( Item * item in self.selectedItems )
     {
         total += item.price ;
     }
 
-    self.totalSelectedLabel.text = [NSString stringWithFormat:@"%.2f" , total ] ;
+    self.totalSelectedLabel.text = [NSString stringWithFormat:@"Total: %.2f" , total ] ;
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {

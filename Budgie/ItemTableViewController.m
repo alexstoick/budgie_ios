@@ -103,9 +103,6 @@
                 [selectedRows addObject:item];
             }
         }
-        Item * x = [selectedRows objectAtIndex:0] ;
-        NSLog(@"%.2f", x.price ) ;
-        totalViewController.selectedItems = selectedRows;
         self.selectedRows = selectedRows ;
     }
 
