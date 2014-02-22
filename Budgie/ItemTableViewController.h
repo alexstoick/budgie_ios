@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ItemTableViewController.h
 //  Budgie
 //
 //  Created by Stoica Alexandru on 2/22/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ItemTableViewController : UITableViewController
 
 @end
