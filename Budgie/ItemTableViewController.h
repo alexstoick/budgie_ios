@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Receipt.h"
 
 @interface ItemTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray * selectedRows ;
+@property (strong, nonatomic) Receipt * receipt ;
+
 
 @end

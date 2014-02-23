@@ -13,6 +13,7 @@
 +(ReceiptItemsDataSource*)getInstance;
 
 @property(strong,nonatomic) NSArray * receiptItems ;
+@property(assign, nonatomic) int current_receipt_id ;
 
 -(void)parseReceiptItemListForReceiptWithId: (int) receipt_id
                        WithCompletion:(void (^)(BOOL))completionBlock;

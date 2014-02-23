@@ -23,16 +23,12 @@
 }
 
 - (void)viewDidLoad {
-
     self.refreshControl = [[UIRefreshControl alloc] init];
-
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-
-
 }
 
 -(void) getReceiptData {
-    [[ReceiptItemsDataSource getInstance] parseReceiptItemListForReceiptWithId:(int)@1 WithCompletion:^(BOOL b) {
+    [[ReceiptItemsDataSource getInstance] parseReceiptItemListForReceiptWithId:self.receipt.receipt_id WithCompletion:^(BOOL b) {
         [self.tableView reloadData];
         NSLog(@"table data has loaded");
         [self.refreshControl endRefreshing];

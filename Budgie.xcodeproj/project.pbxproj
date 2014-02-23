@@ -27,6 +27,7 @@
 		7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9218B93F920026CABB /* TotalViewController.m */; };
 		7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */; };
 		7D4DBC9918B98E330026CABB /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9818B98E330026CABB /* Receipt.m */; };
+		7D4DBC9C18B994860026CABB /* ReceiptsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptDataSource.m; path = "Data Sources/ReceiptDataSource.m"; sourceTree = "<group>"; };
 		7D4DBC9718B98E330026CABB /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Receipt.h; path = Models/Receipt.h; sourceTree = "<group>"; };
 		7D4DBC9818B98E330026CABB /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Receipt.m; path = Models/Receipt.m; sourceTree = "<group>"; };
+		7D4DBC9A18B994860026CABB /* ReceiptsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptsTableViewController.h; sourceTree = "<group>"; };
+		7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptsTableViewController.m; sourceTree = "<group>"; };
 		A1B6673CBA65428FA99D6FD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +139,8 @@
 				7D4DBC9018B911310026CABB /* Data Sources */,
 				7D4DBC8618B905D80026CABB /* ItemTableViewController.h */,
 				7D4DBC8718B905D80026CABB /* ItemTableViewController.m */,
+				7D4DBC9A18B994860026CABB /* ReceiptsTableViewController.h */,
+				7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */,
 				7D4DBC6018B901720026CABB /* AppDelegate.h */,
 				7D4DBC6118B901720026CABB /* AppDelegate.m */,
 				7D4DBC6318B901720026CABB /* Main.storyboard */,
@@ -333,6 +338,7 @@
 			files = (
 				7D4DBC9918B98E330026CABB /* Receipt.m in Sources */,
 				7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */,
+				7D4DBC9C18B994860026CABB /* ReceiptsTableViewController.m in Sources */,
 				7D4DBC8B18B910E90026CABB /* Item.m in Sources */,
 				7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
