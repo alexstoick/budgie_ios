@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "Item.h"
 
-static NSString const *RailsBaseUrl = @"http://pingle.fwd.wf";
+static NSString const *RailsBaseUrl = @"http://bought.today:3000";
 ReceiptItemsDataSource * _receiptItemsDataSource ;
 
 @interface  ReceiptItemsDataSource()

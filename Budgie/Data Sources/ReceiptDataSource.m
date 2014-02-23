@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "Receipt.h"
 
-static NSString const *RailsBaseUrl = @"https://pingle.fwd.wf/" ;
+static NSString const *RailsBaseUrl = @"http://bought.today:3000" ;
 ReceiptDataSource * _receiptDataSource ;
 
 @interface ReceiptDataSource()
