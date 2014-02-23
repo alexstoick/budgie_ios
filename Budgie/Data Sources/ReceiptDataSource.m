@@ -8,6 +8,7 @@
 
 #import "ReceiptDataSource.h"
 #import "AFNetworking.h"
+#import "Receipt.h"
 
 static NSString const *RailsBaseUrl = @"https://pingle.fwd.wf/" ;
 ReceiptDataSource * _receiptDataSource ;
@@ -54,13 +55,23 @@ ReceiptDataSource * _receiptDataSource ;
                   NSMutableArray * receiptsArray = [[NSMutableArray alloc] init];
                   for ( NSDictionary * receiptJSON in array )
                   {
-
+                      Receipt * receipt = [[Receipt alloc] init];
+                      receipt.total = [[receiptJSON valueForKey:@"total"] floatValue];
+                      receipt.receipt_id = [[receiptJSON valueForKey:@"id"] integerValue];
+                      [receiptsArray addObject:receipt];
                   }
 
+                  self.receiptsArray = receiptsArray ;
+                  completionBlock(YES);
 
-              } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              }
+              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
-    }] ;
+                  NSLog(@"%@" , error ) ;
+                  completionBlock(NO);
+
+              }
+    ] ;
 
 }
 
