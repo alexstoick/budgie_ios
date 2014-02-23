@@ -28,13 +28,6 @@
     self.totalSelectedLabel.text = [NSString stringWithFormat:@"Total: %.2f" , total ] ;
 }
 
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-
-    ItemTableViewController * itemTable = viewController ;
-    NSLog(@"321") ;
-    itemTable.selectedRows = self.selectedItems ;
-}
-
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
 
     NSLog(@"dsa") ;

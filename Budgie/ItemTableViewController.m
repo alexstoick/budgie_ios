@@ -85,7 +85,6 @@
 
     if ([[segue identifier] isEqualToString:@"itemListToTotalView"] )
     {
-        TotalViewController * totalViewController = [segue destinationViewController] ;
         NSMutableArray * selectedRows = [[NSMutableArray  alloc] init];
 
         int count = [[ReceiptItemsDataSource getInstance].receiptItems count];
