@@ -25,6 +25,8 @@
 		7D4DBC8B18B910E90026CABB /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8A18B910E90026CABB /* Item.m */; };
 		7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */; };
 		7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9218B93F920026CABB /* TotalViewController.m */; };
+		7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */; };
+		7D4DBC9918B98E330026CABB /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9818B98E330026CABB /* Receipt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptItemsDataSource.m; path = "Data Sources/ReceiptItemsDataSource.m"; sourceTree = "<group>"; };
 		7D4DBC9118B93F920026CABB /* TotalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalViewController.h; sourceTree = "<group>"; };
 		7D4DBC9218B93F920026CABB /* TotalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalViewController.m; sourceTree = "<group>"; };
+		7D4DBC9418B9860A0026CABB /* ReceiptDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReceiptDataSource.h; path = "Data Sources/ReceiptDataSource.h"; sourceTree = "<group>"; };
+		7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReceiptDataSource.m; path = "Data Sources/ReceiptDataSource.m"; sourceTree = "<group>"; };
+		7D4DBC9718B98E330026CABB /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Receipt.h; path = Models/Receipt.h; sourceTree = "<group>"; };
+		7D4DBC9818B98E330026CABB /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Receipt.m; path = Models/Receipt.m; sourceTree = "<group>"; };
 		A1B6673CBA65428FA99D6FD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,8 @@
 		7D4DBC8C18B910ED0026CABB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D4DBC9718B98E330026CABB /* Receipt.h */,
+				7D4DBC9818B98E330026CABB /* Receipt.m */,
 				7D4DBC8918B910E90026CABB /* Item.h */,
 				7D4DBC8A18B910E90026CABB /* Item.m */,
 			);
@@ -183,6 +191,8 @@
 		7D4DBC9018B911310026CABB /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7D4DBC9418B9860A0026CABB /* ReceiptDataSource.h */,
+				7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */,
 				7D4DBC8D18B9112D0026CABB /* ReceiptItemsDataSource.h */,
 				7D4DBC8E18B9112D0026CABB /* ReceiptItemsDataSource.m */,
 			);
@@ -321,8 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4DBC9918B98E330026CABB /* Receipt.m in Sources */,
 				7D4DBC8F18B9112D0026CABB /* ReceiptItemsDataSource.m in Sources */,
 				7D4DBC8B18B910E90026CABB /* Item.m in Sources */,
+				7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
 				7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */,
 				7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */,

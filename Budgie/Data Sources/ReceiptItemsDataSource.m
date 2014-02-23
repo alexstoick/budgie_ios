@@ -45,7 +45,7 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
 
 - (void)parseReceiptItemListForReceiptWithId:(int)receipt_id WithCompletion:(void (^)(BOOL))completionBlock {
 
-    NSString * url = [NSString stringWithFormat:@"%@/receipts/%@.json",
+    NSString * url = [NSString stringWithFormat:@"%@/receipts/%d.json",
                                                 RailsBaseUrl , receipt_id ];
 
     [self.manager GET:url
@@ -53,7 +53,6 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
                   NSDictionary * itemsDictionary = [responseObject valueForKey:@"items"] ;
-                  float total = [[responseObject valueForKey:@"total"] floatValue] ;
                   NSMutableArray * itemsArray = [[NSMutableArray alloc] init];
 
                   for ( NSDictionary * item in itemsDictionary )
