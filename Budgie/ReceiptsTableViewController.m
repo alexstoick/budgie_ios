@@ -10,6 +10,7 @@
 #import "ReceiptDataSource.h"
 #import "Receipt.h"
 #import "ItemTableViewController.h"
+#import "ReceiptItemsDataSource.h"
 
 @implementation ReceiptsTableViewController
 
@@ -59,6 +60,11 @@
 
     NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow] ;
     Receipt * selectedReceipt = [[ReceiptDataSource getInstance].receiptsArray objectAtIndex:indexPath.row] ;
+
+    if ( [ReceiptItemsDataSource getInstance].current_receipt_id != selectedReceipt.receipt_id )
+    {
+        [ReceiptItemsDataSource getInstance].receiptItems = nil ;
+    }
 
     itemTableViewController.receipt = selectedReceipt ;
 

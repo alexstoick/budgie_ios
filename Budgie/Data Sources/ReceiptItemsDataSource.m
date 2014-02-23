@@ -28,6 +28,7 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
     if ( ! _receiptItemsDataSource )
     {
         _receiptItemsDataSource = [[ReceiptItemsDataSource alloc] init];
+        _receiptItemsDataSource.current_receipt_id = 0 ;
     }
 
     return _receiptItemsDataSource ;
@@ -47,6 +48,11 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
 
     NSString * url = [NSString stringWithFormat:@"%@/receipts/%d.json",
                                                 RailsBaseUrl , receipt_id ];
+
+    if ( self.current_receipt_id == receipt_id )
+        return ;
+
+    self.current_receipt_id = receipt_id ;
 
     [self.manager GET:url
            parameters:nil
