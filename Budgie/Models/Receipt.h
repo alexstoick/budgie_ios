@@ -12,5 +12,6 @@
 
 @property (assign,nonatomic) float total ;
 @property (assign,nonatomic) int receipt_id ;
+@property (strong, nonatomic) NSString * receipt_day ;
 
 @end

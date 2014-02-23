@@ -50,7 +50,10 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
                                                 RailsBaseUrl , receipt_id ];
 
     if ( self.current_receipt_id == receipt_id )
+    {
+        completionBlock(YES);
         return ;
+    }
 
     self.current_receipt_id = receipt_id ;
 

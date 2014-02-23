@@ -30,12 +30,13 @@
 -(void) getReceiptData {
     [[ReceiptItemsDataSource getInstance] parseReceiptItemListForReceiptWithId:self.receipt.receipt_id WithCompletion:^(BOOL b) {
         [self.tableView reloadData];
-        NSLog(@"table data has loaded");
+        NSLog(@"table data has loaded %d" , self.receipt.receipt_id);
         [self.refreshControl endRefreshing];
     }] ;
 }
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
+    NSLog(@"dsa") ;
     [self getReceiptData];
 }
 
@@ -87,6 +88,8 @@
     {
         NSMutableArray * selectedRows = [[NSMutableArray  alloc] init];
 
+        TotalViewController * totalViewController = (TotalViewController *)[segue destinationViewController] ;
+
         int count = [[ReceiptItemsDataSource getInstance].receiptItems count];
 
         for ( int i = 0 ; i < count ; ++ i )
@@ -99,6 +102,7 @@
             }
         }
         self.selectedRows = selectedRows ;
+        totalViewController.selectedItems = selectedRows ;
     }
 
 }

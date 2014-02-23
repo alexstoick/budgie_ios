@@ -58,6 +58,7 @@ ReceiptDataSource * _receiptDataSource ;
                       Receipt * receipt = [[Receipt alloc] init];
                       receipt.total = [[receiptJSON valueForKey:@"total"] floatValue];
                       receipt.receipt_id = [[receiptJSON valueForKey:@"id"] integerValue];
+                      receipt.receipt_day = [receiptJSON valueForKey:@"receipt_day"];
                       [receiptsArray addObject:receipt];
                   }
 

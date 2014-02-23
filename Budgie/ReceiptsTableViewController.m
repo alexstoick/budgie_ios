@@ -24,6 +24,7 @@
 }
 
 -(void) getReceipts {
+    [self.refreshControl beginRefreshing];
     [[ReceiptDataSource getInstance] parseReceiptListWithCompletion:^(BOOL b) {
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
@@ -48,7 +49,7 @@
 
     Receipt * receipt = [[ReceiptDataSource getInstance].receiptsArray objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Receipt #%d" , receipt.receipt_id] ;
+    cell.textLabel.text = [NSString stringWithFormat:@"#%d - %@" , receipt.receipt_id , receipt.receipt_day] ;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f£" , receipt.total ] ;
 
     return cell ;
