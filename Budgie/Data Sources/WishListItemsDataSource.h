@@ -10,4 +10,10 @@
 
 @interface WishListItemsDataSource : NSObject
 
++(WishListItemsDataSource *) getInstace ;
+
+@property (strong, nonatomic) NSArray * itemsArray ;
+
+-(void) parseItemsListWithCompletion:(void(^)(BOOL))completionBlock;
+
 @end
