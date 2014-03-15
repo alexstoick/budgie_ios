@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface WishListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WishListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate>
 
 -(void) getWishList ;
 

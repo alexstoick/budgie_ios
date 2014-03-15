@@ -9,6 +9,7 @@
 #import "WishListDataSource.h"
 #import "AFNetworking.h"
 #import "Item.h"
+#import "ProgressHUD.h"
 
 static NSString const *RailsBaseUrl = @"http://localhost:3000" ;
 WishListDataSource * _wishlistDataSource ;
@@ -55,6 +56,7 @@ WishListDataSource * _wishlistDataSource ;
                 for ( NSDictionary * itemDictionary in wishListArray )
                 {
                     Item * currentItem = [[Item alloc] init];
+                    currentItem.itemID = [itemDictionary valueForKey:@"id"] ;
                     currentItem.name = [itemDictionary valueForKey:@"name"] ;
                     currentItem.category = [itemDictionary valueForKey:@"category"] ;
                     [itemsArray addObject:currentItem];
@@ -67,6 +69,39 @@ WishListDataSource * _wishlistDataSource ;
               NSLog( @"%@" , error ) ;
               completionBlock(NO);
     }] ;
+
+
+}
+
+
+- (void)removeItemWithIndex:(long)index fromWishListWithCompletion:(void (^)(BOOL))completionBlock {
+
+    NSString * url = [NSString stringWithFormat:@"%@/users/1/removeWish" , RailsBaseUrl ];
+
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
+
+    Item * item = [self.wishListArray objectAtIndex:index] ;
+
+    NSMutableArray * itemsArray = [NSMutableArray arrayWithArray:self.wishListArray] ;
+    [itemsArray removeObjectAtIndex:index] ;
+    self.wishListArray = itemsArray ;
+
+    [params setObject:item.itemID forKey:@"item_id"];
+
+    [ProgressHUD show:@"Deleting from wish list ... "];
+
+    [self.manager DELETE:url
+              parameters:params
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     [ProgressHUD showSuccess:@"Successfully deleted from wish list!"];
+                     completionBlock(YES) ;
+
+        }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     completionBlock(NO) ;
+        }
+    ] ;
+
 
 
 }

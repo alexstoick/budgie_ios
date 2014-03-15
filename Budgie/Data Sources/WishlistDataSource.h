@@ -15,4 +15,5 @@
 -(void)parseWishListWithCompletion:(void (^)(BOOL))completionBlock;
 +(WishListDataSource *) getInstance ;
 
+-(void) removeItemWithIndex:(long)index fromWishListWithCompletion:(void(^)(BOOL))completionBlock ;
 @end

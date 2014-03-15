@@ -9,6 +9,8 @@
 #import "WishlistViewController.h"
 #import "WishListDataSource.h"
 #import "Item.h"
+#import "SWTableViewCell.h"
+#import "ProgressHUD.h"
 
 @interface WishListViewController()
 
@@ -36,7 +38,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"] ;
+    SWTableViewCell *cell = (SWTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ddd"];
+    
+    if (cell == nil) {
+        NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+        NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+        
+        [rightUtilityButtons sw_addUtilityButtonWithColor:
+         [UIColor colorWithRed:1.0f
+                         green:0.231f
+                          blue:0.188
+                         alpha:1.0f]
+                                                    title:@"Delete"];
+        
+        cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:@"ddd"
+                                  containingTableView:self.tableView // For row height and selection
+                                   leftUtilityButtons:leftUtilityButtons
+                                  rightUtilityButtons:rightUtilityButtons];
+        cell.delegate = self;
+    }
 
     Item * currentItem = [[WishListDataSource getInstance].wishListArray objectAtIndex:indexPath.row] ;
 
@@ -46,6 +67,26 @@
     return cell ;
 }
 
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+
+    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell] ;
+    [[WishListDataSource getInstance] removeItemWithIndex:indexPath.row
+                               fromWishListWithCompletion:^(BOOL b) {
+                                   NSLog(@"deleted stuff") ;
+                                   [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                    target:self
+                                                                  selector:@selector(hideProgressHUDWithTimer:)
+                                                                  userInfo:nil
+                                                                   repeats:NO];
+                               }
+    ];
+
+}
+
+-(void)hideProgressHUDWithTimer:(NSTimer*)timer{
+    [ProgressHUD dismiss] ;
+    [self.tableView reloadData];
+}
 
 -(void) getWishList {
     [self.refreshControl beginRefreshing];
