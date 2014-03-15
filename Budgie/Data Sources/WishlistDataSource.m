@@ -6,26 +6,26 @@
 //  Copyright (c) 2014 Stoica Alexandru. All rights reserved.
 //
 
-#import "WishlistDataSource.h"
+#import "WishListDataSource.h"
 #import "AFNetworking.h"
 #import "Item.h"
 
 static NSString const *RailsBaseUrl = @"http://localhost:3000" ;
-WishlistDataSource * _wishlistDataSource ;
+WishListDataSource * _wishlistDataSource ;
 
-@interface WishlistDataSource()
+@interface WishListDataSource()
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager * manager ;
 
 @end
 
-@implementation WishlistDataSource
+@implementation WishListDataSource
 
-+ (WishlistDataSource *) getInstance {
++ (WishListDataSource *) getInstance {
 
     if ( ! _wishlistDataSource )
     {
-        _wishlistDataSource = [[WishlistDataSource alloc] init] ;
+        _wishlistDataSource = [[WishListDataSource alloc] init] ;
     }
 
     return _wishlistDataSource ;

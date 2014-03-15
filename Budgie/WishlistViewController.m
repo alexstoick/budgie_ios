@@ -7,7 +7,7 @@
 //
 
 #import "WishlistViewController.h"
-#import "WishlistDataSource.h"
+#import "WishListDataSource.h"
 #import "Item.h"
 
 @interface WishlistViewController()
@@ -31,14 +31,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[WishlistDataSource getInstance].wishListArray count];
+    return [[WishListDataSource getInstance].wishListArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"normalCell"] ;
 
-    Item * currentItem = [[WishlistDataSource getInstance].wishListArray objectAtIndex:indexPath.row] ;
+    Item * currentItem = [[WishListDataSource getInstance].wishListArray objectAtIndex:indexPath.row] ;
 
     cell.textLabel.text = currentItem.name ;
     cell.detailTextLabel.text = currentItem.category ;
@@ -49,7 +49,7 @@
 
 -(void) getWishList {
     [self.refreshControl beginRefreshing];
-    [[WishlistDataSource getInstance] parseWishListWithCompletion:^(BOOL b) {
+    [[WishListDataSource getInstance] parseWishListWithCompletion:^(BOOL b) {
         [self.tableView reloadData];
         [self.refreshControl endRefreshing];
     }];

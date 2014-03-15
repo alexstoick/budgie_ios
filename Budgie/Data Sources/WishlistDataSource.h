@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WishlistDataSource : NSObject
+@interface WishListDataSource : NSObject
 
 @property (strong,nonatomic) NSArray * wishListArray ;
 
 -(void)parseWishListWithCompletion:(void (^)(BOOL))completionBlock;
-+(WishlistDataSource *) getInstance ;
++(WishListDataSource *) getInstance ;
 
 @end
