@@ -90,7 +90,7 @@
 
         TotalViewController * totalViewController = (TotalViewController *)[segue destinationViewController] ;
 
-        int count = [[ReceiptItemsDataSource getInstance].receiptItems count];
+        int count = (int)[[ReceiptItemsDataSource getInstance].receiptItems count];
 
         for ( int i = 0 ; i < count ; ++ i )
         {

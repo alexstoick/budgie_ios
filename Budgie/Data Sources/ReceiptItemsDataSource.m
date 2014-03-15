@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "Item.h"
 
-static NSString const *RailsBaseUrl = @"http://bought.today:3000";
+static NSString const *RailsBaseUrl = @"http://localhost:3000" ;
 ReceiptItemsDataSource * _receiptItemsDataSource ;
 
 @interface  ReceiptItemsDataSource()
@@ -69,7 +69,7 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
                       Item * currentItem = [[Item alloc] init];
                       currentItem.name = [item valueForKey:@"name"] ;
                       currentItem.price = [[item valueForKey:@"price"] floatValue] ;
-                      currentItem.category = [[item valueForKey:@"category"] integerValue];
+                      currentItem.category = (int)[[item valueForKey:@"category"] integerValue];
                       [itemsArray addObject:currentItem];
                   }
                   self.receiptItems = itemsArray ;

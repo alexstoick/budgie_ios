@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "Receipt.h"
 
-static NSString const *RailsBaseUrl = @"http://bought.today:3000" ;
+static NSString const *RailsBaseUrl = @"http://localhost:3000" ;
 ReceiptDataSource * _receiptDataSource ;
 
 @interface ReceiptDataSource()
@@ -45,7 +45,7 @@ ReceiptDataSource * _receiptDataSource ;
 
 - (void)parseReceiptListWithCompletion:(void (^)(BOOL))completionBlock {
 
-    NSString *url = [NSString stringWithFormat:@"%@/receipts.json", RailsBaseUrl ] ;
+    NSString *url = [NSString stringWithFormat:@"%@/users/1/receipts.json", RailsBaseUrl ] ;
 
     [self.manager GET:url
            parameters:nil
@@ -57,7 +57,7 @@ ReceiptDataSource * _receiptDataSource ;
                   {
                       Receipt * receipt = [[Receipt alloc] init];
                       receipt.total = [[receiptJSON valueForKey:@"total"] floatValue];
-                      receipt.receipt_id = [[receiptJSON valueForKey:@"id"] integerValue];
+                      receipt.receipt_id = (int)[[receiptJSON valueForKey:@"id"] integerValue];
                       receipt.receipt_day = [receiptJSON valueForKey:@"receipt_day"];
                       [receiptsArray addObject:receipt];
                   }
