@@ -23,16 +23,8 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
-    [self.refreshControl beginRefreshing];
-    [[WishListDataSource getInstance] parseWishListWithCompletion:^(BOOL b) {
-        [self.tableView reloadData];
-    }];
+    [self getWishList];
     [self.navigationController setToolbarHidden:NO animated:NO];
-
-}
-
-- (void)viewDidLoad {
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
