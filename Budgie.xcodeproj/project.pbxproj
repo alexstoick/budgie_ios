@@ -29,6 +29,7 @@
 		7D4DBC9918B98E330026CABB /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9818B98E330026CABB /* Receipt.m */; };
 		7D4DBC9C18B994860026CABB /* ReceiptsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */; };
 		7DFBDE5618D4CA4800DDD82F /* WishlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5518D4CA4800DDD82F /* WishlistViewController.m */; };
+		7DFBDE5918D4CBD600DDD82F /* WishlistDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5818D4CBD600DDD82F /* WishlistDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptsTableViewController.m; sourceTree = "<group>"; };
 		7DFBDE5418D4CA4800DDD82F /* WishlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishlistViewController.h; sourceTree = "<group>"; };
 		7DFBDE5518D4CA4800DDD82F /* WishlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishlistViewController.m; sourceTree = "<group>"; };
+		7DFBDE5718D4CBD600DDD82F /* WishlistDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WishlistDataSource.h; path = "Data Sources/WishlistDataSource.h"; sourceTree = "<group>"; };
+		7DFBDE5818D4CBD600DDD82F /* WishlistDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WishlistDataSource.m; path = "Data Sources/WishlistDataSource.m"; sourceTree = "<group>"; };
 		A1B6673CBA65428FA99D6FD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +204,8 @@
 		7D4DBC9018B911310026CABB /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7DFBDE5718D4CBD600DDD82F /* WishlistDataSource.h */,
+				7DFBDE5818D4CBD600DDD82F /* WishlistDataSource.m */,
 				7D4DBC9418B9860A0026CABB /* ReceiptDataSource.h */,
 				7D4DBC9518B9860A0026CABB /* ReceiptDataSource.m */,
 				7D4DBC8D18B9112D0026CABB /* ReceiptItemsDataSource.h */,
@@ -351,6 +356,7 @@
 				7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */,
 				7DFBDE5618D4CA4800DDD82F /* WishlistViewController.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
+				7DFBDE5918D4CBD600DDD82F /* WishlistDataSource.m in Sources */,
 				7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */,
 				7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */,
 				7D4DBC5E18B901720026CABB /* main.m in Sources */,
