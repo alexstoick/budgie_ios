@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23c03dc2-f53f-4f56-8e62-97fa9998b496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Budgie.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Models/Item.h" afterPath="$PROJECT_DIR$/Budgie/Models/Item.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Budgie/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Data Sources/ReceiptItemsDataSource.m" afterPath="$PROJECT_DIR$/Budgie/Data Sources/ReceiptItemsDataSource.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/WishlistViewController.m" afterPath="$PROJECT_DIR$/Budgie/WishlistViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Budgie.iws" />
@@ -28,10 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WishlistDataSource.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Item.h" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Budgie/Models/Item.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="17" selection-start="310" selection-end="310" vertical-scroll-proportion="0.27962717" vertical-offset="0" max-vertical-offset="751">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WishlistDataSource.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="34" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.91877496" vertical-offset="315" max-vertical-offset="1215">
+            <state line="62" column="49" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-11.3529415" vertical-offset="351" max-vertical-offset="1215">
               <folding>
                 <element signature="e#152#182#0" expanded="true" />
               </folding>
@@ -60,7 +70,7 @@
       <file leaf-file-name="WishlistViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="59" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+            <state line="10" column="96" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -69,8 +79,10 @@
       <file leaf-file-name="WishlistViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="21" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
+            <state line="45" column="54" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="1050">
+              <folding>
+                <element signature="e#156#190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Budgie/Models/Item.h" />
         <option value="$PROJECT_DIR$/Budgie/TotalViewController.h" />
         <option value="$PROJECT_DIR$/Budgie/TotalViewController.m" />
         <option value="$PROJECT_DIR$/Budgie/ItemTableViewController.h" />
@@ -114,10 +125,11 @@
         <option value="$PROJECT_DIR$/Budgie/Models/Receipt.h" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/ReceiptDataSource.m" />
         <option value="$PROJECT_DIR$/Budgie/ReceiptsTableViewController.m" />
+        <option value="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.h" />
         <option value="$PROJECT_DIR$/Budgie/WishlistViewController.h" />
         <option value="$PROJECT_DIR$/Budgie/WishlistViewController.m" />
-        <option value="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.h" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.m" />
+        <option value="$PROJECT_DIR$/Budgie/Models/Item.h" />
       </list>
     </option>
   </component>
@@ -321,11 +333,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Budgie/Models/Item.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/TotalViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="82" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330" />
@@ -371,13 +378,6 @@
         <state line="38" column="75" selection-start="839" selection-end="839" vertical-scroll-proportion="0.1944146" vertical-offset="389" max-vertical-offset="1395" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/ReceiptsTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="112" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0" vertical-offset="479" max-vertical-offset="1230">
@@ -387,16 +387,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.h">
+    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="59" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
+        <state line="45" column="54" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="1050">
+          <folding>
+            <element signature="e#156#190#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/Data Sources/ReceiptDataSource.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="72" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="96" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
@@ -410,10 +419,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="34" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.91877496" vertical-offset="315" max-vertical-offset="1215">
+        <state line="62" column="49" selection-start="1747" selection-end="1747" vertical-scroll-proportion="-11.3529415" vertical-offset="351" max-vertical-offset="1215">
           <folding>
             <element signature="e#152#182#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Budgie/Models/Item.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="310" selection-end="310" vertical-scroll-proportion="0.27962717" vertical-offset="0" max-vertical-offset="751">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -69,7 +69,7 @@ ReceiptItemsDataSource * _receiptItemsDataSource ;
                       Item * currentItem = [[Item alloc] init];
                       currentItem.name = [item valueForKey:@"name"] ;
                       currentItem.price = [[item valueForKey:@"price"] floatValue] ;
-                      currentItem.category = (int)[[item valueForKey:@"category"] integerValue];
+                      currentItem.category =[item valueForKey:@"category"] ;
                       [itemsArray addObject:currentItem];
                   }
                   self.receiptItems = itemsArray ;

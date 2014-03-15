@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) NSString * name ;
 @property (assign, nonatomic) float price ;
-@property (assign, nonatomic) int category ;
+@property (strong, nonatomic) NSString * category ;
 
 @end
