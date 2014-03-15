@@ -49,7 +49,7 @@
 
     Receipt * receipt = [[ReceiptDataSource getInstance].receiptsArray objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"#%d - %@" , receipt.receipt_id , receipt.receipt_day] ;
+    cell.textLabel.text = [NSString stringWithFormat:@"#%ld - %@" , (indexPath.row+1) , receipt.receipt_day] ;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f£" , receipt.total ] ;
 
     return cell ;
@@ -57,18 +57,20 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    ItemTableViewController * itemTableViewController = [segue destinationViewController] ;
-
-    NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow] ;
-    Receipt * selectedReceipt = [[ReceiptDataSource getInstance].receiptsArray objectAtIndex:indexPath.row] ;
-
-    if ( [ReceiptItemsDataSource getInstance].current_receipt_id != selectedReceipt.receipt_id )
+    if ( [[segue identifier ] isEqualToString:@"receiptToItemList"] )
     {
-        [ReceiptItemsDataSource getInstance].receiptItems = nil ;
+        ItemTableViewController * itemTableViewController = [segue destinationViewController] ;
+
+        NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow] ;
+        Receipt * selectedReceipt = [[ReceiptDataSource getInstance].receiptsArray objectAtIndex:indexPath.row] ;
+
+        if ( [ReceiptItemsDataSource getInstance].current_receipt_id != selectedReceipt.receipt_id )
+        {
+            [ReceiptItemsDataSource getInstance].receiptItems = nil ;
+        }
+
+        itemTableViewController.receipt = selectedReceipt ;
     }
-
-    itemTableViewController.receipt = selectedReceipt ;
-
 }
 
 @end
