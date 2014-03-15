@@ -17,11 +17,17 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
+  - ProgressHUD (0.0.1)
+  - SWTableViewCell (0.2.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - ProgressHUD (~> 0.0.1)
+  - SWTableViewCell (~> 0.2.1)
 
 SPEC CHECKSUMS:
   AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
+  ProgressHUD: f09230ed14bb5748367f458e6f90e7c1f67e6c8f
+  SWTableViewCell: accb2c45e44bcb528ec69f83c2113cf567061824
 
 COCOAPODS: 0.29.0

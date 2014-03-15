@@ -16,4 +16,5 @@
 
 -(void) parseItemsListWithCompletion:(void(^)(BOOL))completionBlock;
 
+-(void) addItemWithIndex:(int)index toWishListWithCompletion:(void(^)(BOOL))completionBlock ;
 @end

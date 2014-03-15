@@ -44,6 +44,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    [[WishListItemsDataSource getInstace] addItemWithIndex:indexPath.row
+                                  toWishListWithCompletion:^(BOOL b) {
+                                      [self dismissViewControllerAnimated:YES
+                                                               completion:^{
+                                                                   NSLog(@"going back to main view") ;
+                                                               }
+                                      ];
+                                  }];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

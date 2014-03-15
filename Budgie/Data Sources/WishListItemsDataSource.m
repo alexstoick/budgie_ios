@@ -55,6 +55,7 @@ WishListItemsDataSource * _wishListItemDataSource ;
                     Item * currentItem = [[Item alloc] init] ;
                     currentItem.name = [itemDictionary valueForKey:@"name"] ;
                     currentItem.category = [itemDictionary valueForKey:@"category"] ;
+                    currentItem.itemID = [itemDictionary valueForKey:@"id"] ;
                     [itemsArray addObject:currentItem];
                 }
                 self.itemsArray = itemsArray ;
@@ -65,6 +66,12 @@ WishListItemsDataSource * _wishListItemDataSource ;
                 completionBlock(NO) ;
         }
     ]  ;
+
+}
+
+- (void)addItemWithIndex:(int)index1 toWishListWithCompletion:(void (^)(BOOL))completionBlock {
+
+
 
 }
 
