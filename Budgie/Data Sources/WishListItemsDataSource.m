@@ -48,7 +48,7 @@ WishListItemsDataSource * _wishListItemDataSource ;
               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
                 NSArray * JSONItemsArray = responseObject ;
-                NSMutableArray * itemsArray = [[NSMutableArray alloc] init]
+                NSMutableArray * itemsArray = [[NSMutableArray alloc] init] ;
 
                 for (NSDictionary * itemDictionary in JSONItemsArray )
                 {

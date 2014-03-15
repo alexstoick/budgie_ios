@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23c03dc2-f53f-4f56-8e62-97fa9998b496" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.h" afterPath="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Budgie/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.m" afterPath="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Budgie/WishlistViewController.m" afterPath="$PROJECT_DIR$/Budgie/WishlistViewController.m" />
     </list>
     <ignored path="Budgie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,14 +36,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WishlistViewController.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WishlistViewController.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="54" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="1035">
+            <state line="24" column="52" selection-start="713" selection-end="713" vertical-scroll-proportion="0.41229194" vertical-offset="8" max-vertical-offset="1080">
               <folding>
-                <marker date="1394910608000" expanded="true" signature="1471:1713" placeholder="..." />
-                <marker date="1394910608000" expanded="true" signature="1471:1629" placeholder="{...}" />
-                <marker date="1394910608000" expanded="true" signature="1683:1711" placeholder="{...}" />
+                <marker date="1394912825000" expanded="true" signature="1638:1880" placeholder="..." />
+                <marker date="1394912825000" expanded="true" signature="1638:1796" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -58,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WishListItemsDataSource.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WishListItemsDataSource.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="16" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.7106274" vertical-offset="345" max-vertical-offset="1170">
+            <state line="61" column="16" selection-start="1807" selection-end="1807" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1170">
               <folding>
                 <element signature="e#157#192#0" expanded="true" />
               </folding>
@@ -124,12 +123,12 @@
         <option value="$PROJECT_DIR$/Budgie/Data Sources/ReceiptDataSource.m" />
         <option value="$PROJECT_DIR$/Budgie/ReceiptsTableViewController.m" />
         <option value="$PROJECT_DIR$/Budgie/WishlistViewController.h" />
-        <option value="$PROJECT_DIR$/Budgie/WishlistViewController.m" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.m" />
         <option value="$PROJECT_DIR$/Budgie/Models/Item.h" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/WishlistDataSource.h" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.h" />
         <option value="$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.m" />
+        <option value="$PROJECT_DIR$/Budgie/WishlistViewController.m" />
       </list>
     </option>
   </component>
@@ -385,17 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="54" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="1035">
-          <folding>
-            <marker date="1394910608000" expanded="true" signature="1471:1713" placeholder="..." />
-            <marker date="1394910608000" expanded="true" signature="1471:1629" placeholder="{...}" />
-            <marker date="1394910608000" expanded="true" signature="1683:1711" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="96" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
@@ -426,9 +414,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Budgie/Data Sources/WishListItemsDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="16" selection-start="1773" selection-end="1773" vertical-scroll-proportion="0.7106274" vertical-offset="345" max-vertical-offset="1170">
+        <state line="61" column="16" selection-start="1807" selection-end="1807" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1170">
           <folding>
             <element signature="e#157#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Budgie/WishlistViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="52" selection-start="713" selection-end="713" vertical-scroll-proportion="0.41229194" vertical-offset="8" max-vertical-offset="1080">
+          <folding>
+            <marker date="1394912825000" expanded="true" signature="1638:1880" placeholder="..." />
+            <marker date="1394912825000" expanded="true" signature="1638:1796" placeholder="{...}" />
           </folding>
         </state>
       </provider>

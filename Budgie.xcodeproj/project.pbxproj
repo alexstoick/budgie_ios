@@ -29,7 +29,7 @@
 		7D4DBC9918B98E330026CABB /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9818B98E330026CABB /* Receipt.m */; };
 		7D4DBC9C18B994860026CABB /* ReceiptsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */; };
 		7D69846918D4DDED0023CBEB /* WishListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D69846818D4DDED0023CBEB /* WishListDataSource.m */; };
-		7DFBDE5618D4CA4800DDD82F /* WishlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5518D4CA4800DDD82F /* WishlistViewController.m */; };
+		7DFBDE5618D4CA4800DDD82F /* WishListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5518D4CA4800DDD82F /* WishListViewController.m */; };
 		7DFBDE5C18D4DA5F00DDD82F /* WishListItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5B18D4DA5F00DDD82F /* WishListItemsTableViewController.m */; };
 		7DFBDE5F18D4DC0F00DDD82F /* WishListItemsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBDE5E18D4DC0F00DDD82F /* WishListItemsDataSource.m */; };
 /* End PBXBuildFile section */
@@ -79,8 +79,8 @@
 		7D4DBC9B18B994860026CABB /* ReceiptsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptsTableViewController.m; sourceTree = "<group>"; };
 		7D69846718D4DDED0023CBEB /* WishListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WishListDataSource.h; path = "Data Sources/WishListDataSource.h"; sourceTree = "<group>"; };
 		7D69846818D4DDED0023CBEB /* WishListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WishListDataSource.m; path = "Data Sources/WishListDataSource.m"; sourceTree = "<group>"; };
-		7DFBDE5418D4CA4800DDD82F /* WishlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishlistViewController.h; sourceTree = "<group>"; };
-		7DFBDE5518D4CA4800DDD82F /* WishlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishlistViewController.m; sourceTree = "<group>"; };
+		7DFBDE5418D4CA4800DDD82F /* WishListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListViewController.h; sourceTree = "<group>"; };
+		7DFBDE5518D4CA4800DDD82F /* WishListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListViewController.m; sourceTree = "<group>"; };
 		7DFBDE5A18D4DA5F00DDD82F /* WishListItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListItemsTableViewController.h; sourceTree = "<group>"; };
 		7DFBDE5B18D4DA5F00DDD82F /* WishListItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListItemsTableViewController.m; sourceTree = "<group>"; };
 		7DFBDE5D18D4DC0F00DDD82F /* WishListItemsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WishListItemsDataSource.h; path = "Data Sources/WishListItemsDataSource.h"; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				7DFBDE5A18D4DA5F00DDD82F /* WishListItemsTableViewController.h */,
 				7DFBDE5B18D4DA5F00DDD82F /* WishListItemsTableViewController.m */,
 				7D4DBC9218B93F920026CABB /* TotalViewController.m */,
-				7DFBDE5418D4CA4800DDD82F /* WishlistViewController.h */,
-				7DFBDE5518D4CA4800DDD82F /* WishlistViewController.m */,
+				7DFBDE5418D4CA4800DDD82F /* WishListViewController.h */,
+				7DFBDE5518D4CA4800DDD82F /* WishListViewController.m */,
 				7D4DBC6918B901720026CABB /* Images.xcassets */,
 				7D4DBC5818B901720026CABB /* Supporting Files */,
 				7D4DBC8C18B910ED0026CABB /* Models */,
@@ -367,7 +367,7 @@
 				7D4DBC9618B9860A0026CABB /* ReceiptDataSource.m in Sources */,
 				7DFBDE5F18D4DC0F00DDD82F /* WishListItemsDataSource.m in Sources */,
 				7DFBDE5C18D4DA5F00DDD82F /* WishListItemsTableViewController.m in Sources */,
-				7DFBDE5618D4CA4800DDD82F /* WishlistViewController.m in Sources */,
+				7DFBDE5618D4CA4800DDD82F /* WishListViewController.m in Sources */,
 				7D4DBC6218B901720026CABB /* AppDelegate.m in Sources */,
 				7D4DBC9318B93F920026CABB /* TotalViewController.m in Sources */,
 				7D4DBC8818B905D80026CABB /* ItemTableViewController.m in Sources */,

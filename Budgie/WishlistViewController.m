@@ -10,24 +10,29 @@
 #import "WishListDataSource.h"
 #import "Item.h"
 
-@interface WishlistViewController()
+@interface WishListViewController()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl ;
 
 @end
 
-@implementation WishlistViewController
+@implementation WishListViewController
 
 - (void)viewDidAppear:(BOOL)animated {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl beginRefreshing];
+    [[WishListDataSource getInstance] parseWishListWithCompletion:^(BOOL b) {
+        [self.tableView reloadData];
+    }];
     [self.navigationController setToolbarHidden:NO animated:NO];
 
 }
 
 - (void)viewDidLoad {
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
