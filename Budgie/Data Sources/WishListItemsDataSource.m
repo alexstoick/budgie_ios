@@ -69,7 +69,27 @@ WishListItemsDataSource * _wishListItemDataSource ;
 
 }
 
-- (void)addItemWithIndex:(int)index1 toWishListWithCompletion:(void (^)(BOOL))completionBlock {
+- (void)addItemWithIndex:(long)index toWishListWithCompletion:(void (^)(BOOL))completionBlock {
+    
+
+    NSString * url = [NSString stringWithFormat:@"%@/users/1/addWish" , RailsBaseUrl ] ;
+
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+    NSNumber * temp = [NSNumber numberWithLong:index] ;
+    [params setObject:temp forKey:@"item_id"] ;
+
+    [self.manager POST:url
+            parameters:params
+               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                   completionBlock(YES) ;
+        }
+               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                   completionBlock(NO) ;
+        }
+    ] ;
+    
+    completionBlock(YES);
 
 
 

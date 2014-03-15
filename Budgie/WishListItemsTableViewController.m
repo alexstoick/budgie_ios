@@ -9,6 +9,7 @@
 #import "WishListItemsTableViewController.h"
 #import "WishListItemsDataSource.h"
 #import "Item.h"
+#import "ProgressHUD.h"
 
 @implementation WishListItemsTableViewController
 
@@ -44,8 +45,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    [ProgressHUD show:@"Adding item to wish list ... "] ;
+
     [[WishListItemsDataSource getInstace] addItemWithIndex:indexPath.row
                                   toWishListWithCompletion:^(BOOL b) {
+                                      [ProgressHUD showSuccess:@"Successfully added to wish list!"];
                                       [self dismissViewControllerAnimated:YES
                                                                completion:^{
                                                                    NSLog(@"going back to main view") ;
