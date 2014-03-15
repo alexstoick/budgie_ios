@@ -10,6 +10,7 @@
 #import "WishListItemsDataSource.h"
 #import "Item.h"
 #import "ProgressHUD.h"
+#import "WishListViewController.h"
 
 @implementation WishListItemsTableViewController
 
@@ -50,12 +51,23 @@
     [[WishListItemsDataSource getInstace] addItemWithIndex:indexPath.row
                                   toWishListWithCompletion:^(BOOL b) {
                                       [ProgressHUD showSuccess:@"Successfully added to wish list!"];
-                                      [self dismissViewControllerAnimated:YES
-                                                               completion:^{
-                                                                   NSLog(@"going back to main view") ;
-                                                               }
-                                      ];
+                                      [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                                       target:self
+                                                                     selector:@selector(hideModalView:)
+                                                                     userInfo:nil
+                                                                      repeats:NO];
                                   }];
+
+}
+
+-(void) hideModalView:(NSTimer*)timer {
+
+    [ProgressHUD dismiss];
+    [self dismissViewControllerAnimated:NO
+                             completion:^{
+                                 NSLog(@"going back to main view") ;
+                             }
+    ];
 
 }
 

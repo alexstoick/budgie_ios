@@ -76,8 +76,9 @@ WishListItemsDataSource * _wishListItemDataSource ;
 
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 
-    NSNumber * temp = [NSNumber numberWithLong:index] ;
-    [params setObject:temp forKey:@"item_id"] ;
+    Item * item = [[WishListItemsDataSource getInstace].itemsArray objectAtIndex:index] ;
+
+    [params setObject:item.itemID forKey:@"item_id"] ;
 
     [self.manager POST:url
             parameters:params

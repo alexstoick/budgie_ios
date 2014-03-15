@@ -10,4 +10,6 @@
 
 @interface WishListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+-(void) getWishList ;
+
 @end

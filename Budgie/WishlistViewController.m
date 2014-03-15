@@ -20,11 +20,14 @@
 @implementation WishListViewController
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
-    [self getWishList];
+    if ( ! self.refreshControl )
+    {
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+        [self.tableView addSubview:self.refreshControl];
+    }
     [self.navigationController setToolbarHidden:NO animated:NO];
+    [self getWishList];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -47,8 +50,8 @@
 -(void) getWishList {
     [self.refreshControl beginRefreshing];
     [[WishListDataSource getInstance] parseWishListWithCompletion:^(BOOL b) {
-        [self.tableView reloadData];
         [self.refreshControl endRefreshing];
+        [self.tableView reloadData];
     }];
 }
 
